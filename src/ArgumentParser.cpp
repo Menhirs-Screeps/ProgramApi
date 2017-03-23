@@ -1,5 +1,7 @@
 #include "ProgramApi/ArgumentParser.hpp"
 
+namespace ProgramApi {
+
 ArgumentParser::ArgumentParser (nlohmann::json defs) :
     m_definition ( defs )
 {
@@ -101,4 +103,6 @@ void ArgumentParser::usage ()
         std::cerr << opt["help"].get<std::string> ();
         std::cerr << std::endl;
     }
+}
+
 }
